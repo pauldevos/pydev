@@ -50,6 +50,32 @@ To set up Git/Github for SSH, you can go here:
 https://sourabhbajaj.com/mac-setup/Git for more info.
 
 
+For SSH:
+```
+ssh-keygen -t rsa -b 4096 -C "your@email.com" -f ~/.ssh/id_rsa_personal
+
+```
+Copy the contents from the id_rsa_persona.pub file into Github SSH Keys (e.g. https://github.com/settings/ssh)
+
+```
+# create .ssh/config if doesn't exist
+touch .ssh/config
+
+# add to the file and save.
+Host *
+  AddKeysToAgent yes
+  UseKeychain yes
+  IdentityFile ~/.ssh/id_ed25519
+
+# Add your SSH private key to the ssh-agent and store your passphrase in the keychain 
+
+ssh-add -K ~/.ssh/id_rsa_personal
+```
+
+
+
+
+
 5. install [pyenv](https://gist.github.com/josemarimanio/9e0c177c90dee97808bad163587e80f8)
 
 if command -v pyenv 1>/dev/null 2>&1; then
