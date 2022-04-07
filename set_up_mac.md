@@ -73,9 +73,6 @@ ssh-add -K ~/.ssh/id_rsa_personal
 ```
 
 
-
-
-
 5. install [pyenv](https://gist.github.com/josemarimanio/9e0c177c90dee97808bad163587e80f8)
 
 if command -v pyenv 1>/dev/null 2>&1; then
